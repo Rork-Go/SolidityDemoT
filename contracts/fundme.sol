@@ -13,7 +13,10 @@ contract fundme{
         timestart = block.timestamp;
         timego = _timego;
 
+
         
+
+
     }
 
     //记录投资人信息
