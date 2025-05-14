@@ -9,9 +9,11 @@ contract fundme{
 
     constructor(uint256 _timego){
         dataFeed =AggregatorV3Interface(0x694AA1769357215DE4FAC081bf1f309aDC325306);
-        oner = msg.sender;
+        oner = msg.sender;   
         timestart = block.timestamp;
         timego = _timego;
+
+        
     }
 
     //记录投资人信息
