@@ -14,9 +14,6 @@ contract fundme{
         timego = _timego;
 
 
-        
-
-
     }
 
     //记录投资人信息
