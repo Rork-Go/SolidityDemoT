@@ -3,6 +3,7 @@ require("@chainlink/env-enc").config()
 
 const url1 = process.env.SEPOLIA_URL
 const accounts1 = process.env.AMOUNT
+const apiKey = process.env.APIKEY
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -17,7 +18,7 @@ module.exports = {
   etherscan: {
     // Your API key for Etherscan
     // Obtain one at https://etherscan.io/
-    apiKey: "1234567890"
+    apiKey: apiKey
   }
             
 };
