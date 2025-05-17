@@ -12,5 +12,12 @@ module.exports = {
       url: url1,
       accounts: [accounts1]
     }
+  
+  },
+  etherscan: {
+    // Your API key for Etherscan
+    // Obtain one at https://etherscan.io/
+    apiKey: "EY3TATNTSDNU4AQDHNNX136P5E4H3V3K52"
   }
+            
 };

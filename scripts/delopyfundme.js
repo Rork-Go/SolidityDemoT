@@ -5,7 +5,7 @@ const {ethers} = require("hardhat");
     console.log("1")
     const fundMe = await fundMeFactory.deploy(10);
     await fundMe.waitForDeployment()
-    console.log("123" + fundMe.target)
+    console.log("123 address：" + fundMe.target)
 }
 
 main()
