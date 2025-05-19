@@ -58,6 +58,8 @@ contract fundme{
         ) = dataFeed.latestRoundData();
         return answer;
     }
+
+    //USD-ETH的价格
     function totalfundme(uint256 eth_num) view  internal returns (uint256){
         uint256 eth_price = uint256(getChainlinkDataFeedLatestAnswer());
         return eth_num * eth_price / (10**8) ;
@@ -122,12 +124,13 @@ contract fundme{
     }
 
 
+    //修改合约的拥有者
     function settoken(address _funner ,uint256 upmub) external {
         require(msg.sender == erc20addr,"Only owner");
         fundCollected[_funner] = upmub;
 
     }
-
+    //验证合约地址的拥有者
     function reerc20(address _erc20addr) public  onlyOwner{
         erc20addr = _erc20addr;
     }
