@@ -19,7 +19,7 @@ contract fundme{
     //记录投资人信息
     mapping (address => uint256) public fundCollected;
     //最小的投资余额
-    uint256 constant min_value =10*10**18;//usd
+    uint256 constant min_value =1*10**18;//usd
     //达到目标值生产商可以提款
     uint256 constant targer = 20*10**18;
 
