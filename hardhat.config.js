@@ -1,5 +1,7 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("@chainlink/env-enc").config()
+require("./tasks")
+
 
 const url1 = process.env.SEPOLIA_URL
 const accounts1 = process.env.AMOUNT
@@ -20,7 +22,9 @@ module.exports = {
   etherscan: {
     // Your API key for Etherscan
     // Obtain one at https://etherscan.io/
-    apiKey: apiKey
+    apiKey: {
+      sepolia: apiKey
+    }
   }
             
 };

@@ -14,15 +14,18 @@ const {ethers} = require("hardhat");
     await fundme.deploymentTransaction().wait(6)
       console.log("2")
       //使用脚本部署验证
-    await hre.run("verify:verify", {
-      //address: fundme.target,
-      address: await fundme.getAddress(),
-      constructorArguments: [300],
-
-    }); 
+    await verifyFundMe(fundme.target, [300])
     }else{
       console.log("3")
     }
+
+
+    async function verifyFundMe(fundMeAddr, args) {
+    await hre.run("verify:verify", {
+        address: fundMeAddr,
+        constructorArguments: args,
+      });
+}
 
 
     // init 2 accounts 链接两个账户
@@ -42,10 +45,11 @@ const {ethers} = require("hardhat");
     console.log(`The balance of contract is ${balanceofFirst}`)
 
     // fund contract with second account
-    const second =await fundme.connect(secondAccount).receiveEther({value: ethers.parseEther("0.01")})
+    const second =await fundme.connect(secondAccount).receiveEther({value: ethers.parseEther("0.02")})
     await second.wait()
 
-    // check balance of contract
+    // check balance of contract，获取合约的余额
+
     const balanceofSecond =await ethers.provider.getBalance(fundme.target)
     console.log(`The balance of contract is ${balanceofSecond}`)
 

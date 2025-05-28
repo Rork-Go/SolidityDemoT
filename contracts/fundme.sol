@@ -24,7 +24,7 @@ contract fundme{
     uint256 constant targer = 20*10**18;
 
     //合约的拥有者
-    address public  oner;
+    address public oner;
 
     //合约锁定期开始时间
     uint256 timestart;
