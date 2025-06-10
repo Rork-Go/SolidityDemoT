@@ -20,11 +20,19 @@ const {ethers} = require("hardhat");
     }
 
 
-    async function verifyFundMe(fundMeAddr, args) {
+/**
+ * 异步函数用于验证FundMe合约的部署
+ * 
+ * @param {string} fundMeAddr FundMe合约的地址，这是验证合约时所需的参数
+ * @param {Array} args FundMe合约构造函数的参数数组，用于验证合约时提供构造函数参数
+ */
+async function verifyFundMe(fundMeAddr, args) {
+    // 使用Hardhat的run方法执行名为"verify:verify"的任务，该任务负责验证合约的部署
+    // 需要提供的参数包括合约的地址和构造函数的参数，以确保验证过程能够正确匹配部署时的配置
     await hre.run("verify:verify", {
         address: fundMeAddr,
         constructorArguments: args,
-      });
+    });
 }
 
 

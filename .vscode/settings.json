@@ -1,0 +1,6 @@
+{
+    "editor.fontSize": 17,
+   
+
+    "window.zoomLevel": 0.5, // 整个界面缩放（支持小数）
+}
