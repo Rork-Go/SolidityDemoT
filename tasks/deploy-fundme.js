@@ -1,6 +1,6 @@
 const {task} = require("hardhat/config")
 
-//task入参为任务名字，setAction为任务执行逻辑
+//task入参为任务名字，setAction为任务执行逻辑qqqqq
 task("deploy-fundme","123").setAction(async (taskArgs ,hre) => {
 
 
@@ -29,6 +29,9 @@ task("deploy-fundme","123").setAction(async (taskArgs ,hre) => {
         //address: fundme.target,
         address: _funaddress1,
         constructorArguments: _args1,
+
+
+        
 
         }); 
         
