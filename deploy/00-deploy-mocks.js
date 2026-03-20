@@ -16,6 +16,11 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
     //console.log(getNamedAccounts())
     //console.log(deployments)
 
+
+
+
+
+    
     
         // 部署MockV3Aggregator合约
     // 参数:
